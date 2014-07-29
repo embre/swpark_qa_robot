@@ -1,0 +1,18 @@
+*** Variables ***
+${LOGIN URL}     http://localhost:7272/html/
+*** Keyword ***
+Go to login page 
+		Open Browser    ${LOGIN URL}
+
+Input username and password
+	[Arguments]    ${username}    ${password}
+	Input Text   username_field     ${username}
+	Input Text   password_field    ${password}
+
+Check That login succeeded
+	Title Should Be    Welcome Page
+	Wait Until Page Contains      Login succeeded
+
+Check That login failed
+	Title Should Be    Error Page
+	Wait Until Page Contains      Login failed	

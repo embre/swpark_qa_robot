@@ -1,0 +1,29 @@
+*** Settings ***
+Library    Selenium2Library
+Test Teardown    Close Browser
+Resource    demo_rs.txt
+*** Variables ***
+
+*** Testcases ***
+Demo Login
+	Go to login page 
+	
+	Input username and password Then Click 'Login'
+
+	Check That login succeeded
+	
+
+	
+
+*** Keywords ***
+
+Input username and password Then Click 'Login'
+	Input username and password    demo    mode
+	Click Button    login_button
+
+
+
+
+
+
+

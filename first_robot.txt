@@ -1,0 +1,13 @@
+*** Settings ***
+Library    Selenium2Library
+*** Variables ***
+
+*** Testcases ***
+Log in to Facebook
+	Open Browser    http://www.facebook.com
+	Input Text   //*[@id="email"]    m_giggok@hotmail.com
+	Input Text   pass    
+	Click Button   u_0_l
+	Wait Until Page Contains    EmBre Saran
+	Close Browser
+*** Keywords ***
